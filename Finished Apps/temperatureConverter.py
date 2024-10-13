@@ -35,9 +35,10 @@ def converter():
             if 1 <= user_choice <= 7:
                 pass
             else:
-                print("Select a valid option!")
+                raise ValueError
         except ValueError:
             print("Select a valid option!")
+            continue
 
         if user_choice == 7:
             print("Thanks for using our app! See you soon.")
