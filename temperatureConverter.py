@@ -6,7 +6,7 @@ def celsius_kelvin(temp):
     return temp + 273.15
 
 def fahrenheit_celsius(temp):
-    return (temp - 32) * 9/5
+    return (temp - 32) * 5/9
 
 def fahrenheit_kelvin(temp):
     return (temp - 32) * 9/5 + 273.15
