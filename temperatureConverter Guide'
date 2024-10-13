@@ -1,0 +1,33 @@
+Great! Let’s move on to the practical project.
+
+### **Temperature Converter Project**
+
+**Objective:** Build a program that converts temperatures between Celsius, Fahrenheit, and Kelvin.
+
+---
+
+**Steps to guide you:**
+
+1. **User Input:** Ask the user for a temperature value and the current unit (Celsius, Fahrenheit, or Kelvin).
+   
+2. **Conversion Formulas:**
+   - To convert **Celsius** to **Fahrenheit**:  
+     \[ F = \frac{9}{5}C + 32 \]
+   - To convert **Celsius** to **Kelvin**:  
+     \[ K = C + 273.15 \]
+   - To convert **Fahrenheit** to **Celsius**:  
+     \[ C = \frac{5}{9}(F - 32) \]
+   - To convert **Fahrenheit** to **Kelvin**:  
+     \[ K = \frac{5}{9}(F - 32) + 273.15 \]
+   - To convert **Kelvin** to **Celsius**:  
+     \[ C = K - 273.15 \]
+   - To convert **Kelvin** to **Fahrenheit**:  
+     \[ F = \frac{9}{5}(K - 273.15) + 32 \]
+
+3. **Display the Results:** Show the converted values to the user.
+
+4. **Bonus:** Handle invalid inputs (like if the user provides a unit that isn’t supported).
+
+---
+
+Feel free to implement this and test it out! Let me know how it goes, and if you get stuck anywhere, I’ll guide you further.
