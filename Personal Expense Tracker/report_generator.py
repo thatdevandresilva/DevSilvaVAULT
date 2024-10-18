@@ -5,19 +5,30 @@
 # make the option to save the report as an csv or view it directly on the terminal
 # csv should include: date of expense, category and amount
 
-from datetime import date, datetime
-import expense_tracker
+import datetime
+import pandas as pd
+import csv
+from expense_tracker import pet, categories
 
-def report_generator():
-    # input
+def get_date_range():
+    
 
-
-    # processing
-
-
-    # output
-
-
+def filter_expenses():
     pass
 
-report_generator()
+def sumarize_expenses():
+    pass
+
+def sumarize_per_category():
+    pass
+
+def generate_report():
+    pass
+
+def save_csv():
+    pass
+
+def report_generator():
+    pass
+
+report_generator(pet)
