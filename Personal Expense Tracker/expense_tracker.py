@@ -22,13 +22,23 @@ def pet():
         "Miscellaneous (for any uncategorized expenses)"
     ]
 
-    food = []
-    transportation = []
-    utilities = []
-    entertainment = []
-    healthcare = []
-    rent = []
-    miscs = []
+    category_select = {
+        'food': [],
+        'transportation': [],
+        'utilities': [],
+        'entertainment': [],
+        'healthcare': [],
+        'rent': [],
+        'miscs': []
+    }
+
+    category_food = category_select.__getitem__('food')
+    category_transportation = category_select.__getitem__('transportation')
+    category_utilities = category_select.__getitem__('utilities')
+    category_entertainment = category_select.__getitem__('entertainment')
+    category_healthcare = category_select.__getitem__('healthcare')
+    category_rent = category_select.__getitem__('rent')
+    category_miscs = category_select.__getitem__('miscs')
 
     while True:
         while True:
@@ -47,8 +57,8 @@ def pet():
                     break
                 except ValueError:
                     return "Invalid number! Enter the amount of the expense."
-                
-        # CURRENT WORK
+
+        # LATEST WORK
         # introduction of date input with input validation
         # added date_as_datetime to the print functions
         # created a variable to save date as datetime to be able to store the date
@@ -65,25 +75,32 @@ def pet():
         date_as_datetime = datetime.strptime(user_date, format).date()
 
         if choice == 1:
-            food.append(amount)
+            choice = 'food'
+            category_select[choice].append(amount)
             print(f"${amount} added to {categories[0]}. {date_as_datetime}")
         elif choice == 2:
-            transportation.append(amount)
+            choice = 'transportation'
+            category_select[choice].append(amount)
             print(f"${amount} added to {categories[1]}. {date_as_datetime}")
         elif choice == 3:
-            utilities.append(amount)
+            choice = 'utilities'
+            category_select[choice].append(amount)
             print(f"${amount} added to {categories[2]}. {date_as_datetime}")
         elif choice == 4:
-            entertainment.append(amount)
+            choice = 'entertainment'
+            category_select[choice].append(amount)
             print(f"${amount} added to {categories[3]}. {date_as_datetime}")
         elif choice == 5:
-            healthcare.append(amount)
+            choice = 'healthcare'
+            category_select[choice].append(amount)
             print(f"${amount} added to {categories[4]}. {date_as_datetime}")
         elif choice == 6:
-            rent.append(amount)
+            choice = 'rent'
+            category_select[choice].append(amount)
             print(f"${amount} added to {categories[5]}. {date_as_datetime}")
         elif choice == 7:
-            miscs.append(amount)
+            choice = 'miscs'
+            category_select[choice].append(amount)
             print(f"${amount} added to {categories[6]}. {date_as_datetime}")
 
         option = input("Do you want to add another expense? (Y/N)").lower()
@@ -93,13 +110,13 @@ def pet():
         else: 
             continue
     
-    food_total = sum(food)
-    transportation_total = sum(transportation)
-    utilities_total = sum(utilities)
-    entertainment_total = sum(entertainment)
-    healthcare_total = sum(healthcare)
-    rent_total = sum(rent)
-    miscs_total = sum(miscs)
+    food_total = sum(category_food)
+    transportation_total = sum(category_transportation)
+    utilities_total = sum(category_utilities)
+    entertainment_total = sum(category_entertainment)
+    healthcare_total = sum(category_healthcare)
+    rent_total = sum(category_rent)
+    miscs_total = sum(category_miscs)
 
     print("Options:")
     print("[1] View total spent")
@@ -116,6 +133,7 @@ def pet():
             return "Invalid! Insert a valid option."
 
     if show_expenses == 1:
+        pass
         total_expenses = food_total + transportation_total + utilities_total + entertainment_total + healthcare_total + rent_total + miscs_total
         print(f"Your total expenses: ${total_expenses}")
     elif show_expenses == 2:
