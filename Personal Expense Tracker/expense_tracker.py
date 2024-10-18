@@ -66,8 +66,8 @@ def pet():
         # removed the hour from datetime using the .date()
         while True:
             try:
-                format = "%d/%m/%Y"
-                user_date = input("Date (dd/mm/yyyy): ")
+                format = "%b/%d/%Y"
+                user_date = input("Date (mmddyyyy): ")
                 break
             except ValueError:
                 return "Enter a valid date."
