@@ -66,8 +66,8 @@ def pet():
         # removed the hour from datetime using the .date()
         while True:
             try:
-                format = "%b/%d/%Y"
-                user_date = input("Date (mmddyyyy): ")
+                format = "%b %d, %Y"
+                user_date = input("Date (example: oct 17, 2024): ")
                 break
             except ValueError:
                 return "Enter a valid date."
@@ -76,31 +76,31 @@ def pet():
 
         if choice == 1:
             choice = 'food'
-            category_select[choice].append(amount)
+            category_select[choice].append((amount, date_as_datetime))
             print(f"${amount} added to {categories[0]}. {date_as_datetime}")
         elif choice == 2:
             choice = 'transportation'
-            category_select[choice].append(amount)
+            category_select[choice].append((amount, date_as_datetime))
             print(f"${amount} added to {categories[1]}. {date_as_datetime}")
         elif choice == 3:
             choice = 'utilities'
-            category_select[choice].append(amount)
+            category_select[choice].append((amount, date_as_datetime))
             print(f"${amount} added to {categories[2]}. {date_as_datetime}")
         elif choice == 4:
             choice = 'entertainment'
-            category_select[choice].append(amount)
+            category_select[choice].append((amount, date_as_datetime))
             print(f"${amount} added to {categories[3]}. {date_as_datetime}")
         elif choice == 5:
             choice = 'healthcare'
-            category_select[choice].append(amount)
+            category_select[choice].append((amount, date_as_datetime))
             print(f"${amount} added to {categories[4]}. {date_as_datetime}")
         elif choice == 6:
             choice = 'rent'
-            category_select[choice].append(amount)
+            category_select[choice].append((amount, date_as_datetime))
             print(f"${amount} added to {categories[5]}. {date_as_datetime}")
         elif choice == 7:
             choice = 'miscs'
-            category_select[choice].append(amount)
+            category_select[choice].append((amount, date_as_datetime))
             print(f"${amount} added to {categories[6]}. {date_as_datetime}")
 
         option = input("Do you want to add another expense? (Y/N)").lower()
