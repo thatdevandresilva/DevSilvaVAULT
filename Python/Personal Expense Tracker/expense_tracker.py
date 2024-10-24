@@ -32,13 +32,47 @@ def pet():
         'miscs': []
     }
 
-    category_food = category_select.__getitem__('food')
-    category_transportation = category_select.__getitem__('transportation')
-    category_utilities = category_select.__getitem__('utilities')
-    category_entertainment = category_select.__getitem__('entertainment')
-    category_healthcare = category_select.__getitem__('healthcare')
-    category_rent = category_select.__getitem__('rent')
-    category_miscs = category_select.__getitem__('miscs')
+    def category_food_amount():
+        food_entry = category_select.__getitem__('food')
+        first_entry = food_entry[0]
+        food_value = first_entry[0]
+        return food_value
+
+    def category_transportation_amount():
+        transportation_entry = category_select.__getitem__('transportation')
+        first_entry = transportation_entry[0]
+        transportation_value = first_entry[0]
+        return transportation_value
+
+    def category_utilities_amount():
+        utilities_entry = category_select.__getitem__('utilities')
+        first_entry = utilities_entry[0]
+        utilities_value = first_entry[0]
+        return utilities_value
+
+    def category_entertainment_amount():
+        entertainment_entry = category_select.__getitem__('entertainment')
+        first_entry = entertainment_entry[0]
+        entertainment_value = first_entry[0]
+        return entertainment_value
+
+    def category_healthcare_amount():
+        healthcare_entry = category_select.__getitem__('healthcare')
+        first_entry = healthcare_entry[0]
+        healthcare_value = first_entry[0]
+        return healthcare_value
+    
+    def category_rent_amount():
+        rent_entry = category_select.__getitem__('rent')
+        first_entry = rent_entry[0]
+        rent_value = first_entry[0]
+        return rent_value
+
+    def category_miscs_amount():
+        miscs_entry = category_select.__getitem__('miscs')
+        first_entry = miscs_entry[0]
+        miscs_value = first_entry[0]
+        return miscs_value
 
     while True:
         while True:
@@ -110,13 +144,48 @@ def pet():
         else: 
             continue
     
-    food_total = sum(category_food)
-    transportation_total = sum(category_transportation)
-    utilities_total = sum(category_utilities)
-    entertainment_total = sum(category_entertainment)
-    healthcare_total = sum(category_healthcare)
-    rent_total = sum(category_rent)
-    miscs_total = sum(category_miscs)
+    def food_total():
+        for food_value in category_food_amount:
+            total_value = sum(food_value)
+            print(total_value)
+
+    def transportation_total():
+        for transportation_value in category_transportation_amount:
+            total_value = sum(transportation_value)
+            print(total_value)
+
+    def utilities_total():
+        for utilities_value in category_utilities_amount:
+            total_value = sum(utilities_value)
+            print(total_value)
+
+    def entertainment_total():
+        for entertainment_value in category_entertainment_amount:
+            total_value = sum(entertainment_value)
+            print(total_value)
+
+    def healthcare_total():
+        for healthcare_value in category_healthcare_amount:
+            total_value = sum(healthcare_value)
+            print(total_value)
+
+    def rent_total():
+        for rent_value in category_rent_amount:
+            total_value = sum(rent_value)
+            print(total_value)
+
+    def miscs_total():
+        for miscs_value in category_miscs_amount:
+            total_value = sum(miscs_value)
+            print(total_value)
+
+    #food_total = sum(category_food_amount)
+    #transportation_total = sum(category_transportation_amount)
+    #utilities_total = sum(category_utilities_amount)
+    #entertainment_total = sum(category_entertainment_amount)
+    #healthcare_total = sum(category_healthcare_amount)
+    #rent_total = sum(category_rent_amount)
+    #miscs_total = sum(category_miscs_amount)
 
     print("Options:")
     print("[1] View total spent")

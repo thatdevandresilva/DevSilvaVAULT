@@ -6,7 +6,6 @@
 # csv should include: date of expense, category and amount
 
 import datetime
-import csv
 from expense_tracker import pet, categories
 
 def get_date_range():
@@ -25,20 +24,17 @@ def get_date_range():
         except ValueError:
             return "Invalid! Choose a valid option"
         
-    # today = 
+    today = datetime.date.today()
     
     if report_range == 1:
-        today = datetime.date.today()
         seven_days = datetime.timedelta(days=7)
         start_date = today - seven_days
         end_date = today
     elif report_range == 2:
-        today = datetime.date.today()
         thirty_days = datetime.timedelta(days=30)
         start_date = today - thirty_days
         end_date = today
     elif report_range == 3:
-        today = datetime.date.today()
         while True:
             try:
                 format = "%b %d, %Y"
