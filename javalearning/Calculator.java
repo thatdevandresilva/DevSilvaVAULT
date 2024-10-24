@@ -31,8 +31,14 @@ public class Calculator {
                     int multiply = first_number * second_number;
                     System.out.println(first_number + " * " + second_number + " = " + multiply);
                 } else if (operation.equals("division")) {
-                    int division = first_number / second_number;
-                    System.out.println(first_number + " / " + second_number + " = " + division);
+                    if (second_number == 0) {
+                        System.out.println("Error: Division by zero is not allowed.");
+                    } else {
+                        int division = first_number / second_number;
+                        System.out.println(first_number + " / " + second_number + " = " + division);
+                    }
+                } else {
+                    System.out.println("Error: Select a valid operation.");
                 }
 
             // exit or replay menu
@@ -43,7 +49,7 @@ public class Calculator {
                     int replay_menu = sc.nextInt();
 
                     if (replay_menu == 2) {
-                        System.out.println("Thank you and see you soon!");\
+                        System.out.println("Thank you and see you soon!");
                         sc.close();
                         System.exit(0);
                     }
