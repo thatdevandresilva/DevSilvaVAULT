@@ -24,22 +24,22 @@ public class Calculator {
             if (operation.equals("add")) {
                 int add = first_number + second_number;
                 System.out.println(first_number + " + " + second_number + " = " + add);
-                } else if (operation.equals("subtract")) {
-                    int subtract = first_number - second_number;
-                    System.out.println(first_number + " - " + second_number + " = " + subtract);
-                } else if (operation.equals("multiply")) {
-                    int multiply = first_number * second_number;
-                    System.out.println(first_number + " * " + second_number + " = " + multiply);
-                } else if (operation.equals("division")) {
-                    if (second_number == 0) {
-                        System.out.println("Error: Division by zero is not allowed.");
-                    } else {
-                        int division = first_number / second_number;
-                        System.out.println(first_number + " / " + second_number + " = " + division);
-                    }
+            } else if (operation.equals("subtract")) {
+                int subtract = first_number - second_number;
+                System.out.println(first_number + " - " + second_number + " = " + subtract);
+            } else if (operation.equals("multiply")) {
+                int multiply = first_number * second_number;
+                System.out.println(first_number + " * " + second_number + " = " + multiply);
+            } else if (operation.equals("division")) {
+                if (second_number == 0) {
+                    System.out.println("Error: Division by zero is not allowed.");
                 } else {
-                    System.out.println("Error: Select a valid operation.");
+                    int division = first_number / second_number;
+                    System.out.println(first_number + " / " + second_number + " = " + division);
                 }
+            } else {
+                System.out.println("Error: Select a valid operation.");
+            }
 
             // exit or replay menu
                     System.out.println("Choose an option:");
