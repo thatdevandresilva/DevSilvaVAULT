@@ -42,17 +42,17 @@ public class Calculator {
             }
 
             // exit or replay menu
-                    System.out.println("Choose an option:");
-                    System.out.println("[1] Make another operation");
-                    System.out.println("[2] Exit");
+                System.out.println("Choose an option:");
+                System.out.println("[1] Make another operation");
+                System.out.println("[2] Exit");
 
-                    int replay_menu = sc.nextInt();
+                int replay_menu = sc.nextInt();
 
-                    if (replay_menu == 2) {
-                        System.out.println("Thank you and see you soon!");
-                        sc.close();
-                        System.exit(0);
-                    }
+                if (replay_menu == 2) {
+                    System.out.println("Thank you and see you soon!");
+                    sc.close();
+                    System.exit(0);
+                }
             }
     }
 }
